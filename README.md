@@ -1,1 +1,1 @@
-# machine-learning-homeworks
+# machine learning exercises
