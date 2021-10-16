@@ -1,1 +1,1 @@
-# machine learning exercises
+# Machine Learning Exercises
