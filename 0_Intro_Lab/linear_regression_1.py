@@ -21,9 +21,6 @@ with open(filename, 'r') as f:
     # transform data into numpy array
     data = np.array(data).astype(float)
 
-print(headers)
-print(data[:,2])
-
 x = data[:,1].reshape((-1, 1))
 y = data[:,3]
 
