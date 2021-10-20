@@ -4,9 +4,7 @@
 
 import matplotlib.pyplot as plt
 import csv
-from scipy import stats
 import numpy as np
-import sklearn as sl
 from sklearn.linear_model import LinearRegression
 
 
