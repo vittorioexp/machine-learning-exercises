@@ -19,10 +19,10 @@ with open(filename, 'r') as f:
     # transform data into numpy array
     data = np.array(data).astype(float)
 
-# 1 -> km
-# 2 -> year
-# 3 -> power
-# 4 -> price
+# 0 -> km       R-squared: 0.066196
+# 1 -> year     R-squared: 0.457929
+# 2 -> power    R-squared: 0.502043 (best)
+# 3 -> price
 
 x = data[:,1].reshape((-1, 1))
 y = data[:,3]
@@ -30,7 +30,7 @@ y = data[:,3]
 model = LinearRegression().fit(x, y)
 
 r_sq = model.score(x, y)
-print('coefficient of determination:', r_sq)
+print('R-squared:', r_sq)
 
 print('intercept:', model.intercept_)
 print('slope:', model.coef_)
