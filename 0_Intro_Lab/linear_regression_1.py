@@ -19,6 +19,11 @@ with open(filename, 'r') as f:
     # transform data into numpy array
     data = np.array(data).astype(float)
 
+# 1 -> km
+# 2 -> year
+# 3 -> power
+# 4 -> price
+
 x = data[:,1].reshape((-1, 1))
 y = data[:,3]
 
@@ -32,8 +37,7 @@ print('slope:', model.coef_)
 
 
 plt.plot(x, y, 'o', label='original data')
-plt.plot(x, model.intercept_ + model.coef_*x, 'r*', label='fitted line linregress')
-#plt.plot(x, float(reg.intercept_) + float(reg.coef_)*x, 'y+', label='fitted line Linear Model')
+plt.plot(x, model.intercept_ + model.coef_*x, 'r*', label='fitted line LinearRegression')
 #plt.plot(data[:,1], w[0] + w[1]*data[:,1], 'g', label='fitted line Least Squares')
 plt.legend()
 plt.xlabel('Year')
